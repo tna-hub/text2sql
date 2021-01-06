@@ -1,3 +1,6 @@
+import os
+####  1. Importing MLflow module ################################
+import mlflow
 import json
 import torch
 from sqlnet.utils import *
@@ -8,6 +11,7 @@ import datetime
 
 import argparse
 
+####  2. Analysis on all the parsing arguments to identify project entry points ################################
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--toy', action='store_true', 
@@ -28,11 +32,11 @@ if __name__ == '__main__':
     B_word=42
     if args.toy:
         USE_SMALL=True
-        GPU=True
+        GPU=False
         BATCH_SIZE=15
     else:
         USE_SMALL=False
-        GPU=True
+        GPU=False
         BATCH_SIZE=64
     TEST_ENTRY=(True, True, True)  # (AGG, SEL, COND)
 
