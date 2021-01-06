@@ -85,3 +85,6 @@ if __name__ == '__main__':
             model, BATCH_SIZE, test_sql_data, test_table_data, TEST_ENTRY)))
     print("Test execution acc: {}".format(epoch_exec_acc(
             model, BATCH_SIZE, test_sql_data, test_table_data, TEST_DB)))
+            
+# Identify and Loging some metrics testing functions ################################
+mlflow.log_metrics({"agg": agg_m, "sel": sel_m, "cond": cond_m})
