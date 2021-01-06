@@ -1,0 +1,25 @@
+name: train.py test.py
+channels:
+  - defaults
+  - pytorch
+  - anaconda
+  - conda-forge
+dependencies:
+  - python=3.6
+  - pip
+  - pip:
+    - Babel
+    - docopt
+    - et-xmlfile
+    - jdcal
+    - odfpy
+    - olefile
+    - openpyxl
+    - pytz
+    - records
+    - SQLAlchemy
+    - tablib
+    - unicodecsv
+    - xlrd
+    - xlwt
+    - mlflow
